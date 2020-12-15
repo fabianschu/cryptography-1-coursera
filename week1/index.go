@@ -26,6 +26,7 @@ func main() {
 
 	// var allCtWithLenLimit [10]string
 	targetByteArray, err1 := hex.DecodeString(targetCipher)
+	
 	if err1 != nil {
     fmt.Println(err1)
 	}
@@ -82,8 +83,6 @@ func main() {
 		}
 
 		targetChar := maxKey(charCount)
-		fmt.Println("targetChar:")
-		fmt.Println(targetChar)
 
 		r, _ := utf8.DecodeRuneInString(targetChar)
 		if unicode.IsUpper(r) {
@@ -122,11 +121,6 @@ func maxKey(dict map[string]int) (string){
 		}
 	}
 
-	fmt.Println("*****")
-	fmt.Println(dict)
-	fmt.Println(totalChars)
-
-	
 	if totalChars > 6 {
 		return " "
 	} else {
