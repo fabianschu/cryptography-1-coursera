@@ -72,10 +72,10 @@ func ctrDecrypt(ciphertextHex string) {
 
 		plainTextByteStore = append(plainTextByteStore, plainTextFragment...)
 
-		fmt.Println(string(plainTextByteStore))
-		fmt.Println(plainTextByteStore)
 		initializationVector[len(initializationVector)-1]++
 	}
+
+	fmt.Println(string(plainTextByteStore))
 }
 
 func fixedXorDecrypt(input1, input2 []byte) []byte {
